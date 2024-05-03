@@ -1,0 +1,94 @@
+.formCointainer {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    label {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        cursor: pointer;
+        font-weight: bold;
+        align-items: center;
+        color: #dab49d;
+        border: 1px solid #dab49d;
+        border-radius: 10px;
+        padding: 5px;
+
+        
+        span {
+            display: inline;
+            padding-inline: 10px;
+            flex: 1;
+            text-align: start;
+        }
+
+        input {
+            position: relative;
+            flex: .5;
+            outline: none;
+            border: none;
+            text-align: center;
+            background: transparent;
+            color: #dab49d;
+            text-shadow: 0 0 2px #5d3023;
+            padding-right: 10px;
+
+            &::-webkit-calendar-picker-indicator {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+        }
+
+        input:focus {
+            background: linear-gradient(to top,#dab49d, #dab49d55, #dab49d20);
+            border-bottom: 1px solid #5d3023;
+            border-bottom-right-radius: 10px;
+            height: 100%;
+        }
+    }
+}
+
+.createContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 15px;
+    padding: 150px 10px 20px;
+    align-items: center;
+
+    h2 {
+        color: #dab49d;
+        text-shadow: 0 0 2px #5d3023, 0 0 4px #5d3023, 0 0 10px #5d3023;
+        font-weight: bold;
+    }
+}
+.submitBtn {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #dab49d;
+    color: #5d3023;
+    text-align: center;
+    border: 1px solid #5d3023;
+    border-radius: 10px;
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
